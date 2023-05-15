@@ -1,0 +1,22 @@
+[
+  {
+    "title": "The Basics of JavaScript",
+    "content": "JavaScript is a programming language that is primarily used in web development to create interactive effects within web browsers."
+  },
+  {
+    "title": "The Evolution of Web Development",
+    "content": "Web development has come a long way since the early days of the internet. From HTML to CSS to JavaScript, this article explores the evolution of web development over the past few decades."
+  },
+  {
+    "title": "Best Practices for Web Development",
+    "content": "Developing a website or web application requires careful planning and execution. This article covers some best practices for web development to help ensure your project is a success."
+  },
+  {
+    "title": "JavaScript Frameworks for Web Development",
+    "content": "JavaScript frameworks are designed to simplify the process of developing complex web applications. This article looks at some of the most popular JavaScript frameworks and their benefits."
+  },
+  {
+    "title": "Web Development Tools for Productivity",
+    "content": "From code editors to version control systems, there are a wide variety of tools available to help web developers work more efficiently. This article explores some of the most useful web development tools."
+  }
+]

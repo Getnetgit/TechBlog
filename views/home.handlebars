@@ -1,0 +1,56 @@
+<!-- Loop over each object in the projects array -->
+{{#if logged_in}}
+{{#each blogs as |blog| }}
+<div class="blogcard ">
+  <header class="blogcardheader" data-id={{blog.id}}>
+    <h5>{{blog.title}}</h5>
+    <h6>Posted by {{blog.user.name}} on {{format_date blog.date_created}} </h6>
+  </header>
+  <p>{{blog.content}} </p>
+  <br>
+  <form class='borderOn m-3 hide' id="{{concat "form" blog.id}}">
+    <div class="m-3">
+
+      <div class="mb-3">
+        <label for="content" class="form-label">Add comment </label>
+        <textarea type="text" class="form-control" id={{concat "comment"
+          blog.id}}></textarea>
+
+      </div>
+      <button type="submit" class="black-btn mb-3 updateBlog" data-saveID={{blog.id}} id={{concat "save"
+        blog.id}}>Submit</button>
+    </div>
+  </form>
+  <h6>Comnents</h6>
+  <br>
+
+  {{#each blog.comments as |comment| }}
+  <p>{{comment.content}}</p>
+  <p> - {{comment.user.name}}, {{format_date comment.date_created}}</p>
+  {{/each}}
+
+</div>
+{{/each}}
+{{else}}
+{{#each blogs as |blog| }}
+<div class="blogcard">
+  <header class="blogcardheader" data-id={{blog.id}}>
+    <h5>{{blog.title}}</h5>
+    <h6>Posted by {{blog.user.name}} on {{format_date blog.date_created}} </h6>
+  </header>
+  <p>{{blog.content}} </p>
+  <br>
+
+  <h6>Comnents</h6>
+  <br>
+
+  {{#each blog.comments as |comment| }}
+  <p>{{comment.content}}</p>
+  <p> - {{comment.user.name}}, {{format_date comment.date_created}}</p>
+  {{/each}}
+
+</div>
+{{/each}}
+{{/if}}
+
+<script src="./js/blog.js"></script>
