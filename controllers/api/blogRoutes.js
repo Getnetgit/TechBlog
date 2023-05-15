@@ -14,6 +14,9 @@ router.post('/', withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+
+//update blog by ID
 router.put('/:id', async (req, res) => {
   try {
     const updatedBlog = await Blog.update({
@@ -33,7 +36,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-
+//delete blog by id
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const blogData = await Blog.destroy({
