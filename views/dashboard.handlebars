@@ -1,4 +1,4 @@
-<!-- Loop over each object in the projects array -->
+
 <div>
   <div  class='center'>
      <button class='black-btn' id="Add_New_Blog"> + Add New blog</button>
@@ -26,12 +26,12 @@
     </form>
   </div>
 
-
+<!-- Loop over each object in the projects array -->
 
   {{#each blogs as |blog| }}
   <div class="bloglist" data-id={{blog.id}}>
-    <h5>{{blog.title}}</h5> 
-    <h6> {{format_date blog.date_created}} </h6>
+    <h5 data-id={{blog.id}}>{{blog.title}}</h5> 
+    <h6 data-id={{blog.id}} > {{format_date blog.date_created}} </h6>
   </div>
    
   <div class="blogcard  hide" id={{concat 'form' blog.id}}>
@@ -41,7 +41,7 @@
     <form class='new-blog-form  m-3' id={{concat 'form' blog.id}}>
       <div>
         <label for="title" class="form-label">Blog title</label>
-        <input type="text" class="form-control" id={{concat "title" blog.id}} value={{blog.title}}>
+        <textarea type="text" class="form-control" id={{concat "title" blog.id}} >{{blog.title}}</textarea>
 
         <div class="mb-3">
           <label for="content" class="form-label">Blog content</label>

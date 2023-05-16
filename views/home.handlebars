@@ -3,8 +3,8 @@
 {{#each blogs as |blog| }}
 <div class="blogcard ">
   <header class="blogcardheader" data-id={{blog.id}}>
-    <h5>{{blog.title}}</h5>
-    <h6>Posted by {{blog.user.name}} on {{format_date blog.date_created}} </h6>
+    <h5 data-id={{blog.id}} >{{blog.title}}</h5>
+    <h6 data-id={{blog.id}}>Posted by {{blog.user.name}} on {{format_date blog.date_created}} </h6>
   </header>
   <p>{{blog.content}} </p>
   <br>

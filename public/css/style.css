@@ -99,3 +99,6 @@ border:4px;
 border-color: black;
 border-style: solid;
 }
+.block{
+  display: block;
+}
